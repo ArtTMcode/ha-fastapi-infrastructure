@@ -2,6 +2,15 @@
 
 Реализация отказоустойчивого кластера для веб-версии с балансировкой трафика и сквозным мониторингом.
 
+<div align="center">
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" title="Python"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/fastapi.png" alt="FastAPI" title="FastAPI"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/docker.png" alt="Docker" title="Docker"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/grafana.png" alt="Grafana" title="Grafana"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/prometheus.png" alt="Prometheus" title="Prometheus"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/linux.png" alt="Linux" title="Linux"/></code>
+</div>
+
 ---
 
 ## Технологии и архитектура
@@ -47,3 +56,22 @@ docker-compose up -d --build
 docker stop sre_project-app1-1
 ```
 3. **Результат:** Nginx мгновенно фиксирует падение контейнера `app1` и бесшовно перенаправляет весь трафик на выжившие `app2` и `app3`. Конечные пользователи не получают ошибок, а в Grafana фиксируется перераспределение графиков RPS.
+
+![График Grafana](images/grafana_for_readme.jpg)
+
+---
+
+## 🚀 Быстрый старт
+
+1. **Клонируйте репозиторий**
+```bash
+git clone https://github.com/ArtTMcode/ha-fastapi-infrastructure.git
+cd ha-fastapi-infrastructure
+```
+2. **Запустите всю инфраструктуру**
+```bash
+docker-compose up -d --build
+```
+3. **Проверьте доступность**
+* Документация FastAPI: `http://localhost/docs`
+* Панель мониторинга Grafana: `http://localhost:3000`
